@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Dinámica</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #a1b5e4;
+            border-color: #3d3d3d;
+            border: 5px;
+            margin: 0;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: #678094;
+            padding: 10px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #6426d6;
+            color: rgb(252, 248, 248);
+            border: 5px;
+            border-radius: 5px;
+            
+            cursor: pointer;
+
+        }
+        button:hover {
+            background-color: #66809c;
+            
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MI PAGINA WEB </h1>
+    </header>
+
+    <main>
+        <section>
+            <p id="mensaje">Quieres una sorpresa preciona el bottom.</p>
+            <div class="button-container">
+                <button id="botonAccion">CLICK</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+
+    <script>
+        // Identificamos los elementos HTML que serán manipulados con JavaScript
+        var boton = document.getElementById('botonAccion');
+        var mensaje = document.getElementById('mensaje');
+
+        // Funcionalidad dinámica: cambiar el texto del párrafo al hacer clic 
+        boton.addEventListener('click', function() {
+            mensaje.textContent = 'Eres uno de los 10 ganadores de un automovil ';
+        });
+    </script>
+    
+</body>
+</html>
