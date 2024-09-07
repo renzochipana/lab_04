@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ámbito de Variables y Constantes</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000000;
+            background-color: #b09cdd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Ámbito de Bloque</h1>
+    <div id="result"></div>
+
+    <script>
+       console.log(x === undefined); // true 
+       var x = 3; // devolverá un valor de undefined 
+       var myvar = 'my value'; 
+       (function()
+        { 
+        console.log(myVar); // undefined 
+        var myvar = 'valor local'; 
+        })();
+    </script>
+</body>
+</html>
