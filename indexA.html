@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PAGINA WEB</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #91c4ac;
+            margin: 0;
+            padding: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgb(52, 128, 131);
+            color: rgb(0, 0, 0);
+            border: 5PX , color(rgb(0, 0, 0));
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MI PAGINA WEB</h1>
+    </header>
+    
+    <main>
+        <section>
+            <p id="texto">Haga click en el botton "PRESIONAR".</p>
+            <div class="button-container">
+                <button id="botonCambiar">PRESIONAR</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+
+    <script>
+        // Identificamos el botón y el párrafo
+        const botonCambiar = document.getElementById('botonCambiar');
+        const texto = document.getElementById('texto');
+
+        // Agregamos una funcionalidad al botón para cambiar el texto
+        botonCambiar.addEventListener('click', function() {
+            texto.textContent = 'Acaba de ganar un Iphone 15 proMax';
+        });
+    </script>
+</body>
+</html>
