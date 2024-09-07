@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ámbito y Hoisting</title>
+</head>
+<body>
+    <h1>Verificación de Ámbito y Hoisting</h1>
+    <script>
+        // Ejemplo de hoisting de variable sin asignar
+        console.log('Valor de x antes de asignar:', x); // undefined
+        var x = 5;
+        console.log('Valor de x después de asignar:', x); // 5
+
+        // Funciones anidadas para verificar ámbito
+        function funcionExterior() {
+            var exterior = 'Variable exterior';
+            console.log('Dentro de funcionExterior, exterior:', exterior); // Variable exterior
+
+            function funcionInterior() {
+                var interior = 'Variable interior';
+                console.log('Dentro de funcionInterior, exterior:', exterior); // Variable exterior
+                console.log('Dentro de funcionInterior, interior:', interior); // Variable interior
+            }
+
+            funcionInterior();
+            console.log('Fuera de funcionInterior, interior:', typeof interior); // undefined
+        }
+
+        funcionExterior();
+        console.log('Fuera de funcionExterior, exterior:', typeof exterior); // undefined
+    </script>
+</body>
+</html>
