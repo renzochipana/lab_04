@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ámbito de Variables y Constantes</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000000;
+            background-color: #b09cdd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Ámbito de Bloque</h1>
+    <div id="result"></div>
+
+    <script>
+        // Bloque de código para demostrar ámbito de bloque
+        let output = '';
+        if (true) {
+            let variableBloque = 'Soy una variable con ámbito de bloque';
+            const constanteBloque = 'Soy una constante con ámbito de bloque';
+
+            output += `<p>Dentro del bloque:</p>`;
+            output += `<p>Variable: ${variableBloque}</p>`;
+            output += `<p>Constante: ${constanteBloque}</p>`;
+        }
+
+        // Intento de acceder a las variables y constantes fuera del bloque
+        try {
+            // Intentando acceder a variableBloque fuera del bloque
+            output += `<p>Fuera del bloque (variable): ${variableBloque}</p>`;
+        } catch (e) {
+            output += `<p>Error fuera del bloque (variable): ${e.message}</p>`;
+        }
+
+        try {
+            // Intentando acceder a constanteBloque fuera del bloque
+            output += `<p>Fuera del bloque (constante): ${constanteBloque}</p>`;
+        } catch (e) {
+            output += `<p>Error fuera del bloque (constante): ${e.message}</p>`;
+        }
+
+        // Mostrar resultados en el elemento con id "result"
+        document.getElementById('result').innerHTML = output;
+    </script>
+</body>
+</html>
