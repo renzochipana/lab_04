@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Excepción Personalizada en JavaScript</title>
+</head>
+
+<body>
+    <h1>Ejemplo de Excepción Personalizada en JavaScript</h1>
+    <p>Abre la consola del navegador para ver los resultados del código.</p>
+    <script>
+        function UserException(message) {
+            this.message = message;
+            this.name = 'UserException';
+        }
+        function getMonthName(mo) {
+            mo--; 
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+                'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            if (months[mo] !== undefined) {
+                return months[mo];
+            } else {
+                throw new UserException('InvalidMonthNo');
+            }
+        }
+        let monthName;
+        try {
+            const myMonth = 15; 
+            monthName = getMonthName(myMonth);
+        } catch (e) {
+            monthName = 'unknown';
+            console.error(e.message, e.name); 
+        }
+    </script>
+</body>
+
+</html>

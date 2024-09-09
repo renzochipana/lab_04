@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ámbito de Variables</title>
+    <script>
+        function exampleFunction() {
+            const x = "declared inside function"; // x solo se puede usar en exampleFunction
+            console.log("Inside function");
+            console.log(x);
+        }
+
+        exampleFunction();
+        console.log(x); // Causa un error
+    </script>
+</head>
+
+<body>
+    <h1>Bienvenido a la Página de Ámbito de Variables</h1>
+    <p>Abre la consola del navegador para ver el error.</p>
+</body>
+
+</html>

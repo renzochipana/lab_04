@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Funciones</title>
+    <script>
+        function makeFunc() {
+            const name = 'Mozilla';
+            function displayName() {
+                console.log(name);
+            }
+            return displayName;
+        }
+
+        const myFunc = makeFunc();
+        myFunc(); // Llama a la función devuelta
+    </script>
+</head>
+
+<body>
+    <h1>Bienvenido a la Página de Funciones</h1>
+    <p>Abre la consola del navegador para ver el nombre.</p>
+</body>
+
+</html>
